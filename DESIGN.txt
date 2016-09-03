@@ -1,0 +1,18 @@
+Poison the Punch
+a game by Jacob Warner
+
+Poison the Punch is a stealth game made in
+javafx.  In the game, you attend parties with
+the attention of ruining them.  Each party room
+contains a punch bowl, and your goal is to poison
+the punch bowl and wait till a certain number of people leave
+leave the party.  However, your reputation precedes you, and
+party monitors will be searching for you as you hide
+yourself in the clusters of people.  As more people get
+sick from the punch, there will be less people to hide
+amongst.  Party rooms vary in difficulty by requiring
+a higher percentage of guests to be poisoned, and by
+introducing new mechanics such as clusters that recognize
+you and disperse if you stay in them too long.  The final
+level will have guests that replace the punch bowl if people
+keep getting sick.
