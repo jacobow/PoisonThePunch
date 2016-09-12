@@ -113,6 +113,7 @@ class Game {
     }
 
     private void stepLevel1(double elaspedTime) {
+    	if(godMode) level.setGodMode(true);
     	level.showScore();
     	level.controlMonitorCollisions(width, height);
     	level.setMonitorVelocityAndPlayerSafety();
