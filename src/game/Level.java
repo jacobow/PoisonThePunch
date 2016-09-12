@@ -6,6 +6,7 @@ import java.util.Random;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 class Level {
@@ -442,7 +443,7 @@ class Level {
 	 * get thirsty
 	 */
 	public void setThirstTimer() {
-		this.thirstTimer = 180;
+		this.thirstTimer = 160;
 	}
 	/**
 	 * ticks the thirst timer down one frame
@@ -457,6 +458,8 @@ class Level {
 		return guestPoisoned;
 	}
 	/**
+	 * determines if the level is passed and displays
+	 * text if it is
 	 * @return whether or not the player has made enough
 	 * guests exit to win
 	 */

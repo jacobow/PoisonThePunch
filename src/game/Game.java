@@ -95,17 +95,17 @@ class Game {
     		case 1:
     			stepLevel1(elaspedTime);
     			if(level.lose()) initLevel1();
-    	    	if(level.win()) initLevel2();
+    	    	if(level.win()) nextLevelButton();
     			break;
     		case 2:
     			stepLevel2(elaspedTime);
     			if(level.lose()) initLevel2();
-    	    	if(level.win()) initLevel3();
+    	    	if(level.win()) nextLevelButton();
     			break;
     		case 3:
     			stepLevel3(elaspedTime);
     			if(level.lose()) initLevel3();
-    	    	if(level.win()) initMenu();
+    	    	if(level.win()) nextLevelButton();
     			break;
     		default:
     			break;
@@ -234,6 +234,37 @@ class Game {
     	showTitle();
     	initInstructions();
     	initMenuButtons();
+    }
+    private void nextLevelButton() {
+    	boolean holder;
+    	holder = godMode;
+    	godMode = true;
+    	Button b = new Button("Level passed.  Click to continue.");
+        b.setLayoutX(200);
+        b.setLayoutY(300);
+        b.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+            	switch(currentLevel) {
+        		case 1:
+        			initLevel2();
+        			godMode = holder;
+        			break;
+        		case 2:
+        			initLevel3();
+        			godMode = holder;
+        			break;
+        		case 3:
+        			initMenu();
+        			godMode = holder;
+        			break;
+        		default:
+        			break;
+        	}
+            }
+        });
+        root.getChildren().add(b);
     }
 
     private void handleKeyPress(KeyCode code) {
