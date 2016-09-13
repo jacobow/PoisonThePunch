@@ -113,7 +113,6 @@ class Game {
     }
 
     private void stepLevel1(double elaspedTime) {
-    	if(godMode) level.setGodMode(true);
     	level.showScore();
     	level.controlMonitorCollisions(width, height);
     	level.setMonitorVelocityAndPlayerSafety();
@@ -237,9 +236,7 @@ class Game {
     	initMenuButtons();
     }
     private void nextLevelButton() {
-    	boolean holder;
-    	holder = godMode;
-    	godMode = true;
+    	level.setGodMode(true);
     	Button b = new Button("Level passed.  Click to continue.");
         b.setLayoutX(200);
         b.setLayoutY(300);
@@ -250,15 +247,15 @@ class Game {
             	switch(currentLevel) {
         		case 1:
         			initLevel2();
-        			godMode = holder;
+        			level.setGodMode(godMode);
         			break;
         		case 2:
         			initLevel3();
-        			godMode = holder;
+        			level.setGodMode(godMode);
         			break;
         		case 3:
         			initMenu();
-        			godMode = holder;
+        			level.setGodMode(godMode);
         			break;
         		default:
         			break;
