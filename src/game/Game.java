@@ -222,7 +222,7 @@ class Game {
     	m.setX(100);
     	m.setY(270);
     	root.getChildren().add(m);
-    	showInstruction(200, 400, "Hide from the monitor in guest clusters.  In level two,  guests will eventually\nrecognize you, causing the cluster to be ineffective.");
+    	showInstruction(200, 400, "Hide from the monitor in guest clusters.  Only clusters with more than 5 people will\nhide you.");
     	GuestCluster gc = new GuestCluster(100, 400, root);
     	gc.populate();
     	gc.setSafe(true);
