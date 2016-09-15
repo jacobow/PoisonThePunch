@@ -65,7 +65,8 @@ class Level {
 		this.clusterMatrix = clusterMatrix;
 	}
 	/**
-	 * places the clusters according to the cluster matrix
+	 * places the clusters according to the cluster matrix,
+	 * tells the level to keep track of them in a list,
 	 * and populates them with guests
 	 */
 	public void initClusters() {
